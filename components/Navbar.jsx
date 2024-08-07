@@ -1,13 +1,24 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import images from "../constants/images";
 
 const Navbar = () => {
   return (
     <View style={styles.Nav_con}>
-      <Image style={styles.img} source={images.profile} resizeMode="contain" />
-
-      <Image style={styles.img} source={images.message} resizeMode="contain" />
+      <TouchableOpacity>
+        <Image
+          style={styles.img}
+          source={images.profile}
+          resizeMode="contain"
+        />
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Image
+          style={styles.img}
+          source={images.message}
+          resizeMode="contain"
+        />
+      </TouchableOpacity>
     </View>
   );
 };
