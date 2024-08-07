@@ -90,7 +90,7 @@ const TabLayout = () => {
                 <View style={[styles.tab_con, {}]}>
                   <Image
                     style={styles.img2}
-                    source={images.dash}
+                    source={images.bigYollow}
                     resizeMode="contain"
                   />
                   <Image
