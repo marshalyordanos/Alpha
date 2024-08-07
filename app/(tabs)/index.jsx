@@ -39,8 +39,8 @@ const data = [
 
 const index = () => {
   return (
-    <SafeAreaView style={{ backgroundColor: "#F5F7FE", height: "100%" }}>
-      <ScrollView>
+    <SafeAreaView style={{ backgroundColor: "white", height: "100%" }}>
+      <ScrollView style={{ backgroundColor: "#F5F7FE" }}>
         <View style={styles.top_sec}>
           <Navbar />
           {/*  hero section */}
