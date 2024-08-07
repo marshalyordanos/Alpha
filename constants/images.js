@@ -14,10 +14,12 @@ import earnings from "../assets/images/docs.png";
 import apps from "../assets/images/apps.png";
 import dash from "../assets/images/dash.png";
 
-import blue from "../assets/images/blue.png";
-import green from "../assets/images/green.png";
-import yellow from "../assets/images/yellow.png";
+import blue from "../assets/images/blue1.png";
+import green from "../assets/images/green1.png";
+import yellow from "../assets/images/yellow1.png";
 import bigYollow from "../assets/images/bigYellow.png";
+import bigYollow2 from "../assets/images/bigY.png";
+
 import black from "../assets/images/black.png";
 import star from "../assets/images/star.png";
 
@@ -42,4 +44,5 @@ export default {
   green,
   black,
   star,
+  bigYollow2,
 };

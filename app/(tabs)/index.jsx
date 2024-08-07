@@ -1,7 +1,7 @@
 import {
   FlatList,
   Image,
-  SafeAreaView,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -16,6 +16,8 @@ import CustomButton from "../../components/CustomButton";
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import CardItem from "../../components/CardItem";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 const data = [
   {
     id: 1,
@@ -171,7 +173,7 @@ const index = () => {
             <View style={styles.explore_sec_big}>
               <Image
                 style={styles.img_bigYellow}
-                source={images.bigYollow}
+                source={images.bigYollow2}
                 resizeMode="contain"
               />
               <Text style={styles.bold_text_sm}>Home Loan</Text>
@@ -282,12 +284,14 @@ const index = () => {
                   leads' credit scores.
                 </Text>
               </View>
-              <TouchableOpacity style={styles.button}>
-                <Text style={[styles.text, { color: "white" }]}>
-                  Check CIBIL
-                </Text>
-                <AntDesign name={"plus"} size={24} color="white" />
-              </TouchableOpacity>
+              <View style={styles.shadow_con}>
+                <TouchableOpacity style={styles.button}>
+                  <Text style={[styles.text, { color: "white" }]}>
+                    Check CIBIL
+                  </Text>
+                  <AntDesign name={"plus"} size={24} color="white" />
+                </TouchableOpacity>
+              </View>
             </View>
             <Image
               style={{ width: 66, height: 66 }}
@@ -429,7 +433,7 @@ const styles = StyleSheet.create({
   last_sec: {
     marginTop: 40,
     padding: 24,
-    height: 350,
+    height: 383,
     backgroundColor: "#18202F",
     marginBottom: -20,
   },
@@ -444,11 +448,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    shadowColor: "#D2a6FF",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.25,
-    shadowRadius: 0,
-    elevation: 4,
-    gap: 8,
+  },
+  shadow_con: {
+    height: 52,
+    borderRadius: 16,
+    backgroundColor: "#D2a6FF",
   },
 });

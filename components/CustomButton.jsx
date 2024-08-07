@@ -1,12 +1,21 @@
-import { TouchableOpacity, StyleSheet, Text, View, Image } from "react-native";
+import {
+  TouchableOpacity,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Platform,
+} from "react-native";
 import React from "react";
 
 const CustomButton = ({ text, Icon, name }) => {
   return (
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.text}>{text}</Text>
-      <Icon name={name} size={24} color="white" />
-    </TouchableOpacity>
+    <View style={styles.shadow_con}>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.text}>{text}</Text>
+        <Icon name={name} size={24} color="white" />
+      </TouchableOpacity>
+    </View>
   );
 };
 
@@ -23,12 +32,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    shadowColor: "#8E2EEE",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.25,
-    shadowRadius: 0,
-    elevation: 4,
-    gap: 8,
+  },
+  shadow_con: {
+    height: 52,
+    borderRadius: 16,
+    backgroundColor: "#8E2EEE",
   },
   text: {
     color: "white",

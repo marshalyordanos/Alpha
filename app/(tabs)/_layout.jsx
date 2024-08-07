@@ -14,7 +14,7 @@ const TabIcon = ({ icon, color, name, focused }) => {
       />
       <Text
         style={{
-          fontFamily: focused ? "Play" : "OpenSans",
+          //   fontFamily: focused ? "Play" : "OpenSans",
           fontSize: 10,
           color: "black",
         }}
@@ -176,6 +176,6 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     left: 22,
-    top: 9,
+    top: 19,
   },
 });
